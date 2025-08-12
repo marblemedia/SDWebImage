@@ -195,6 +195,13 @@
     
     // Calculate refresh duration
     NSTimeInterval duration = self.displayLink.duration;
+    [self nextFrameWithDuration:duration];
+}
+
+- (void)nextFrameWithDuration:(NSTimeInterval) duration {
+    
+    NSUInteger totalFrameCount = self.totalFrameCount;
+    NSTimeInterval playbackRate = self.playbackRate;
     
     NSUInteger currentFrameIndex = self.currentFrameIndex;
     NSUInteger nextFrameIndex = (currentFrameIndex + 1) % totalFrameCount;
