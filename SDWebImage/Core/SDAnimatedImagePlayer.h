@@ -106,7 +106,7 @@ typedef NS_ENUM(NSUInteger, SDAnimatedImagePlaybackMode) {
 /// @param loopCount The loop count
 - (void)seekToFrameAtIndex:(NSUInteger)index loopCount:(NSUInteger)loopCount;
 
-- (void)nextFrameWithDuration:(NSTimeInterval)duration;
+- (void)nextFrameWithDuration:(NSTimeInterval)duration checkIfPlaying:(bool)checkIfPlaying;
 
 /// Clear the frame cache buffer. The frame cache buffer size can be controlled by `maxBufferSize`.
 /// By default, when stop or pause the animation, the frame buffer is still kept to ready for the next restart

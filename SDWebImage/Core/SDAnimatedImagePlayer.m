@@ -195,10 +195,10 @@
     
     // Calculate refresh duration
     NSTimeInterval duration = self.displayLink.duration;
-    [self nextFrameWithDuration:duration];
+    [self nextFrameWithDuration:duration checkIfPlaying:true];
 }
 
-- (void)nextFrameWithDuration:(NSTimeInterval) duration {
+- (void)nextFrameWithDuration:(NSTimeInterval) duration checkIfPlaying:(bool)checkIfPlaying{
     
     NSUInteger totalFrameCount = self.totalFrameCount;
     NSTimeInterval playbackRate = self.playbackRate;
@@ -279,7 +279,7 @@
     }
     
     // Since we support handler, check animating state again
-    if (!self.isPlaying) {
+    if (checkIfPlaying && !self.isPlaying) {
         return;
     }
     
