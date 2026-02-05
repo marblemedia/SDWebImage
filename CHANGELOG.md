@@ -1,3 +1,29 @@
+## [5.21.5 - 5.21 Patch on Dec 3rd 2025]
+See [all tickets marked for the 5.21.5 release](https://github.com/SDWebImage/SDWebImage/milestone/147)
+
+### Fixes
+- Try to move the SDWebImageDownloaderOperation dataTask property initialization into synchronized lock to avoid thread-safe issue #3856 #3842
+
+## [5.21.4 - 5.21 Patch on Nov 28th 2025]
+See [all tickets marked for the 5.21.4 release](https://github.com/SDWebImage/SDWebImage/milestone/146)
+
+### Fixes
+- Using @synchronized to always lock the cache/loader operation to ensure thread-safe. Fix crash issue on iOS 26 #3855 #3849
+
+## [5.21.3 - 5.21 Patch on Sep 9th 2025]
+See [all tickets marked for the 5.21.3 release](https://github.com/SDWebImage/SDWebImage/milestone/145)
+
+### Fixes
+- Switched image encoding to a context-aware approach with a safe fallback, allowing per-request encoder selection without changing the public API. #3844 @CloudlessMoon
+
+## [5.21.2 - 5.21 Patch on Aug 29th 2025]
+See [all tickets marked for the 5.21.2 release](https://github.com/SDWebImage/SDWebImage/milestone/144)
+
+### Fixes
+- Do not ignore blendMode in SDImageTintTransformer #3831 @bdaz 
+- Fix the retryFailed option does not get modified by optionsProcessor #3829 @AirBlack
+- Avoid self if be nil in block. #3826 @hawk0620
+
 ## [5.21.1 - Xcode 26 Compatible on Jun 10th, 2025]
 See [all tickets marked for the 5.21.1 release](https://github.com/SDWebImage/SDWebImage/milestone/143)
 
